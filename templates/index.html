@@ -19,10 +19,29 @@
 <div class="col-md6 border rounded">
     <h2>{{item.title}}</h2>
     <div>
-        {{item.content}}
+        Адрес - {{item.address}}
+        Общая площадь - {{item.plos}}
+        Кол-во комнат - {{item.num_kom}}
+        Этаж - {{item.etag}}
+        Этажей в доме - {{item.etag_home}}
+        Жилая площадь - {{item.living}}
+        Площадь кухни {{item.kitchen}}
+        Ремонт - {{item.remont}}
+        Тип дома - {{item.type_home}}
+        Пассажирских лифтов {{item.pass_lifts}}
+        Грузовых лифтов {{item.gruz_lifts}}
+        {% if item.name %}
+        Имя - {{item.name}}
+        {% endif %}
+        Год постройки - {{item.year}}
+        Высота потолков - {{item.height}}
+        Пандус - {{item.pandus}}
+        Парковка - {{item.parking}}
+        Описание: {{item.content}}
     </div>
+</div>
     <div>
-        Владелец - {{item.user.name}}, Дата размещения - {{item.created_date}}
+        Владелец - {{item.user.name}}, Дата размещения - {{item.created_date}}, Номер телефона - {{item.user.about}}
     </div>
 </div>
 {% endfor %}

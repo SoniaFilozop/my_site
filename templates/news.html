@@ -14,6 +14,147 @@
         {% endfor %}
     </p>
     <p>
+        {{ form.address.label }}<br>
+        {{ form.address(class="form-control") }}<br>
+        {% for error in form.address.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.plos.label }}<br>
+        {{ form.plos(class="form-control") }}<br>
+        {% for error in form.plos.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.num_kom.label }}<br>
+        {{ form.num_kom(class="form-control") }}<br>
+        {% for error in form.num_kom.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.etag.label }}<br>
+        {{ form.etag(class="form-control") }}<br>
+        {% for error in form.etag.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.etag_home.label }}<br>
+        {{ form.etag_home(class="form-control") }}<br>
+        {% for error in form.etag_home.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.living.label }}<br>
+        {{ form.living(class="form-control") }}<br>
+        {% for error in form.living.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+
+    </p>
+    <p>
+        {{ form.kitchen.label }}<br>
+        {{ form.kitchen(class="form-control") }}<br>
+        {% for error in form.kitchen.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.remont.label }}<br>
+        {{ form.remont(class="form-control") }}<br>
+        {% for error in form.remont.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.type_home.label }}<br>
+        {{ form.type_home(class="form-control") }}<br>
+        {% for error in form.type_home.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.pass_lifts.label }}<br>
+        {{ form.pass_lifts(class="form-control") }}<br>
+        {% for error in form.pass_lifts.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.gruz_lifts.label }}<br>
+        {{ form.gruz_lifts(class="form-control") }}<br>
+        {% for error in form.gruz_lifts.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.name.label }}<br>
+        {{ form.name(class="form-control") }}<br>
+    </p>
+    </p>
+        <p>
+        {{ form.year.label }}<br>
+        {{ form.year(class="form-control") }}<br>
+            {% for error in form.year.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.height.label }}<br>
+        {{ form.height(class="form-control") }}<br>
+        {% for error in form.height.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.pandus.label }}<br>
+        {{ form.pandus(class="form-control") }}<br>
+        {% for error in form.pandus.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.parking.label }}<br>
+        {{ form.parking(class="form-control") }}<br>
+        {% for error in form.parking.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>
         {{ form.content.label }}<br>
         {{ form.content(class="form-control") }}<br>
         {% for error in form.content.errors %}
