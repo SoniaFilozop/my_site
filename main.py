@@ -141,7 +141,6 @@ def news_delete(id):
         abort(404)
     return redirect('/')
 
-
 def main():
     db_session.global_init("db/blogs.db")
     app.run()
