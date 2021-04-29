@@ -1,6 +1,8 @@
 from os import abort
 
 from flask import Flask, render_template, redirect, request, make_response, url_for
+from werkzeug.utils import secure_filename
+
 from data import db_session
 from data.users import User
 from data.news import News
@@ -17,7 +19,7 @@ login_manager.init_app(app)
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
-        return redirect(url_for('profile'))
+        return redirect(url_for('/'))
     form = LoginForm()
     if form.validate_on_submit():
         db_sess = db_session.create_session()
@@ -42,6 +44,13 @@ def index():
     db_sess = db_session.create_session()
     news = db_sess.query(News).filter(News.is_private != True)
     return render_template("index.html", news=news)
+
+
+@app.route("/my_news")
+def my():
+    db_sess = db_session.create_session()
+    news = db_sess.query(News).filter(News.is_private == 1)
+    return render_template("my_index.html", news=news)
 
 
 @app.route('/logout')
@@ -140,6 +149,7 @@ def news_delete(id):
     else:
         abort(404)
     return redirect('/')
+
 
 def main():
     db_session.global_init("db/blogs.db")
